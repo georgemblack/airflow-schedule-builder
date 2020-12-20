@@ -1,0 +1,149 @@
+/* ==========================================================================
+   CSS Variables
+   ========================================================================== */
+:root {
+  /* defined widths */
+  --page-max-width: 80rem;
+
+  /* primary fonts */
+  --primary-font: system-ui, sans-serif;
+  --primary-font-mono: system-ui-mono, monospace;
+
+  /* font weights */
+  --font-weight-bold: 900;
+  --font-weight-normal: 400;
+
+  /* general purpose colors */
+  --background-color: #f7f7f7;
+  --primary-font-color: #202020;
+}
+
+/* ==========================================================================
+  CSS reset
+  ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+  Primary components
+  ========================================================================== */
+body {
+  max-width: 80rem;
+  margin: 1em auto;
+  padding: 0 1em;
+  font-family: var(--primary-font);
+  background-color: var(--background-color);
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  margin: 0 1em 0 0;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0.85em;
+  color: var(--primary-font-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+
+span {
+  color: var(--primary-font-color);
+}
+
+pre code {
+  display: block;
+  margin-top: 1em;
+  font-family: var(--primary-font-mono);
+  color: var(--primary-font-color-faded);
+}
+
+table {
+  margin-top: 1em;
+}
+
+table {
+  width: 100%;
+  min-width: 50em;
+  font-size: 0.85em;
+  color: var(--primary-font-color);
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.35em 0.25em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+form {
+  margin-top: 1em;
+}
+
+input,
+textarea {
+  background-color: var(--background-color);
+}
+
+input,
+button,
+textarea {
+  font-size: 1em;
+  font-family: var(--primary-font);
+  color: var(--primary-font-color);
+  padding: 0.25em 0.5em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.25em;
+  box-sizing: border-box;
+}
+
+input:hover,
+button:hover,
+textarea:hover {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+input:active,
+button:active,
+textarea:active {
+  border: 1px solid var(--primary-font-color);
+}
+
+button {
+  background-color: var(--background-color);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+button:active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+label {
+  color: var(--primary-font-color);
+}
