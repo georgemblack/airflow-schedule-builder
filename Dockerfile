@@ -1,0 +1,9 @@
+FROM node:15-stretch AS build-env
+ADD . /build
+WORKDIR /build
+RUN yarn && yarn build
+
+FROM nginx:1.18
+WORKDIR /app
+COPY --from=build-env ./build/public /app/public
+COPY ./image/nginx.conf /etc/nginx/conf.d/default.conf
